@@ -1,0 +1,26 @@
+{
+  "name": "mediasoup-demo",
+  "version": "1.0.0",
+  "description": "A demo application of [mediasoup](https://mediasoup.org) **v3**.",
+  "scripts": {
+    "app": "cd app && npm start",
+    "server": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/versatica/mediasoup-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/versatica/mediasoup-demo/issues"
+  },
+  "homepage": "https://github.com/versatica/mediasoup-demo#readme",
+  "dependencies": {
+    "pm2": "^4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "nodemon": "^2.0.4"
+  }
+}

@@ -92,7 +92,7 @@ async function run()
 async function runMediasoupWorkers()
 {
 	const { numWorkers } = config.mediasoup;
-
+ 
 	logger.info('running %d mediasoup Workers...', numWorkers);
 
 	for (let i = 0; i < numWorkers; ++i)
@@ -265,6 +265,8 @@ async function createExpressApp()
 						dtlsParameters
 					});
 
+				console.log(data)
+
 				res.status(200).json(data);
 			}
 			catch (error)
@@ -386,7 +388,7 @@ async function createExpressApp()
 						sctpStreamParameters,
 						appData
 					});
-
+				
 				res.status(200).json(data);
 			}
 			catch (error)
@@ -520,9 +522,9 @@ async function getOrCreateRoom({ roomId })
 	// If the Room does not exist create a new one.
 	if (!room)
 	{
-		logger.info('creating a new Room [roomId:%s]', roomId);
-
 		const mediasoupWorker = getMediasoupWorker();
+
+		logger.info('creating a new Room [roomId:%s] [workerPid:%s]', roomId, mediasoupWorker.pid);
 
 		room = await Room.create({ mediasoupWorker, roomId });
 

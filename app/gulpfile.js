@@ -96,7 +96,7 @@ function bundle(options)
 		.transform('babelify')
 		.transform(envify(
 			{
-				NODE_ENV : process.env.NODE_ENV,
+				...process.env,
 				_        : 'purge'
 			}));
 

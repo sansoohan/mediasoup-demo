@@ -197,7 +197,7 @@ module.exports =
 		'react/jsx-closing-bracket-location': 2,
 		'react/jsx-curly-spacing': 2,
 		'react/jsx-equals-spacing': 2,
-		'react/jsx-handler-names': 2,
+		// 'react/jsx-handler-names': 2,
 		'react/jsx-indent-props': [ 2, 'tab' ],
 		'react/jsx-indent': [ 2, 'tab' ],
 		'react/jsx-key': 2,

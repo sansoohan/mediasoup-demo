@@ -1,4 +1,4 @@
-let protooPort = 4443;
+let protooPort = process.env.PROTOO_LISTEN_PORT;
 
 if (window.location.hostname === 'test.mediasoup.org')
 	protooPort = 4444;
